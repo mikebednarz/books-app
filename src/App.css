@@ -1,38 +1,99 @@
 .App {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+html {
+  background-color: #282c34;
+}
+
+.header {
+  color: aliceblue;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-book-text {
+  color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 
-.App-header {
+.add-button {
+  float: right;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.add-button:active {
+  opacity: 70%;
+}
+
+.book-card {
+  background-color: aliceblue;
+  padding-top: 12px;
+  padding-bottom: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.main-page-body {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  display: inline;
+}
+
+.delete-card-button {
+  float: right;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  color: aliceblue;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-card-button:active {
+  opacity: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-info-input {
+  width: 100%;
+}
+
+.edit-buttons-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.not-found {
+  color: red;
+}
+
+.sort-by {
+  color: aliceblue;
+}
+
+.dropdown {
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: aliceblue;
 }
