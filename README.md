@@ -1,6 +1,10 @@
+# Books App
+
+Use this application to store book cards using their Open Library ID number.
+
 # Starting the project
 
-To run this project, start by running npm run build in your terminal. Next, run npm start and the project should open in your local host.
+To run this project, start by running npm install in your terminal. Then, run npm run build. Finally, run npm start and the project should open in your local host.
 
 ## Available Scripts
 

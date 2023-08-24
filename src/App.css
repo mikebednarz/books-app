@@ -97,3 +97,7 @@ html {
   padding-bottom: 5px;
   background-color: aliceblue;
 }
+
+.id-inline {
+  display: inline;
+}

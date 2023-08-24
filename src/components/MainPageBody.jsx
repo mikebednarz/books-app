@@ -39,6 +39,7 @@ const MainPageBody = () => {
       .then(() => {
         dispatch(addBook(data));
         setNotFound(false);
+        console.log(bookList);
       })
       .catch(() => {
         setNotFound(true);

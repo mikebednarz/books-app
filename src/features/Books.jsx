@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const bookSlice = createSlice({
   name: "books",
-  initialState: { value: [] },
+  initialState: { value: window.localStorage.getItem('STATE') ? JSON.parse(window.localStorage.getItem('STATE')) : [] },
   reducers: {
     addBook: (state, action) => {
       let addBook = true;

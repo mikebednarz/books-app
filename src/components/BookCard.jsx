@@ -18,29 +18,28 @@ const BookCard = ({title, author, description, id}) => {
   }
 
   const handleTitleUpdate = (id) => {
-    console.log(document.getElementById('editTitle')?.innerHTML)
-    dispatch(updateTitle({id: id, title: document.getElementById('editTitle')?.innerHTML}));
+    dispatch(updateTitle({id: id, title: document.getElementById(`editTitle${id}`).innerHTML}));
   }
 
   const handleAuthorUpdate = (id) => {
-    console.log(document.getElementById('editAuthor')?.innerHTML)
-    dispatch(updateAuthor({id: id, author: document.getElementById('editAuthor')?.innerHTML}));
+    dispatch(updateAuthor({id: id, author: document.getElementById(`editAuthor${id}`).innerHTML}));
   }
 
   const handleDescriptionUpdate = (id) => {
-    console.log(document.getElementById('editDescription')?.innerHTML)
-    dispatch(updateDescription({id: id, description: document.getElementById('editDescription')?.innerHTML}));
+    dispatch(updateDescription({id: id, description: document.getElementById(`editDescription${id}`).innerHTML}));
   }
 
   return (
     <div className="book-card">
+      <p id={`${id}`} className="id-inline">{id}</p>
+
       <button className="delete-card-button" onClick={() => handleDelete(id)}>X</button>
 
-      <p><strong>Title:</strong> <span id='editTitle' contentEditable='true'>{title}</span> <button style={buttonStyle} onClick={() => handleTitleUpdate(id)}><BiSave /></button></p>
+      <p><strong>Title:</strong> <span id={`editTitle${id}`} contentEditable='true'>{title}</span> <button style={buttonStyle} onClick={() => handleTitleUpdate(document.getElementById(`${id}`).innerHTML)}><BiSave /></button></p>
 
-      <p><strong>Author:</strong> <span id='editAuthor' contentEditable='true'>{author}</span> <button style={buttonStyle} onClick={() => handleAuthorUpdate(id)}><BiSave /></button></p>
+      <p><strong>Author:</strong> <span id={`editAuthor${id}`} contentEditable='true'>{author}</span> <button style={buttonStyle} onClick={() => handleAuthorUpdate(document.getElementById(`${id}`).innerHTML)}><BiSave /></button></p>
 
-      <p><strong>Description:</strong> <span id='editDescription' contentEditable='true'>{description}</span> <button style={buttonStyle} onClick={() => handleDescriptionUpdate(id)}><BiSave /></button></p>
+      <p><strong>Description:</strong> <span id={`editDescription${id}`} contentEditable='true'>{description}</span> <button style={buttonStyle} onClick={() => handleDescriptionUpdate(document.getElementById(`${id}`).innerHTML)}><BiSave /></button></p>
     </div>
   )
 };
